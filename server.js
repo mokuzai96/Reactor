@@ -81,9 +81,9 @@ app.listen(PORT, () => {
      console.log(`Dashboard running on http://localhost:${PORT}`);
      client.login(process.env.TOKEN);
  });
-+
-+// Graceful Shutdown
-+process.on('SIGTERM', () => {
-+    console.log('SIGTERM signal received: closing HTTP server');
-+    process.exit(0);
-+});
+
+// Graceful Shutdown
+process.on('SIGTERM', () => {
+    console.log('SIGTERM signal received: closing HTTP server');
+    process.exit(0);
+});
