@@ -17,13 +17,11 @@ A premium, highly-customizable Discord bot for automatic emoji reactions. Config
    npm install
    ```
 
-2. **Configure Environment**:
-   Edit the `.env` file with your Discord Bot Token and Turso Database credentials.
-   ```env
-   TOKEN=your_token
-   DATABASE_URL=libsql://your-db.turso.io
-   DATABASE_AUTH_TOKEN=your_auth_token
-   ```
+21:    Edit the `.env` file with your Discord Bot Token and PostgreSQL connection string.
+22:    ```env
+23:    TOKEN=your_token
+24:    DATABASE_URL=postgresql://user:password@host:port/database
+25:    ```
 
 3. **Required Intents**:
    Ensure `Guilds`, `GuildMessages`, `MessageContent`, and `GuildMessageReactions` are enabled in the Discord Developer Portal.
@@ -39,10 +37,9 @@ Moving the bot to Railway is straightforward:
 
 1. **Connect GitHub**: Connect your repository to a new Railway project.
 2. **Variables**: Add the following Environment Variables in the Railway dashboard:
-   - `TOKEN`: Your Discord Bot Token.
-   - `DATABASE_URL`: Your Turso DB URL.
-   - `DATABASE_AUTH_TOKEN`: Your Turso Auth Token.
-3. **Automatic Deploy**: Railway will detect `package.json` and `railway.json` to start the bot automatically.
+41:    - `TOKEN`: Your Discord Bot Token.
+42:    - `DATABASE_URL`: Your Railway PostgreSQL URL (found in the Postgres service variables).
+43: 3. **Automatic Deploy**: Railway will detect `package.json` and `railway.json` to start the bot automatically.
 
 ## 🎮 Discord Commands
 
